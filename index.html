@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <md-switch class="theme__switch"></md-switch>
+      <div class="calculator">
+        <md-outlined-text-field label="Calculate" value="">
+        </md-outlined-text-field>
+        <md-filled-tonal-button class="button">⌫</md-filled-tonal-button>
+        <div class="calculator__buttons">
+          <div class="buttons__row">
+            <md-filled-tonal-button class="button">%</md-filled-tonal-button>
+            <md-filled-tonal-button class="button">C</md-filled-tonal-button>
+            <md-filled-tonal-button class="button">÷</md-filled-tonal-button>
+          </div>
+          <div class="buttons__row">
+            <md-filled-tonal-button class="button">7</md-filled-tonal-button>
+            <md-filled-tonal-button class="button">8</md-filled-tonal-button>
+            <md-filled-tonal-button class="button">9</md-filled-tonal-button>
+            <md-filled-tonal-button class="button">X</md-filled-tonal-button>
+          </div>
+          <div class="buttons__row">
+            <md-filled-tonal-button class="button">4</md-filled-tonal-button>
+            <md-filled-tonal-button class="button">5</md-filled-tonal-button>
+            <md-filled-tonal-button class="button">6</md-filled-tonal-button>
+            <md-filled-tonal-button class="button">-</md-filled-tonal-button>
+          </div>
+          <div class="buttons__row">
+            <md-filled-tonal-button class="button">1</md-filled-tonal-button>
+            <md-filled-tonal-button class="button">2</md-filled-tonal-button>
+            <md-filled-tonal-button class="button">3</md-filled-tonal-button>
+            <md-filled-tonal-button class="button">+</md-filled-tonal-button>
+          </div>
+          <div class="buttons__row">
+            <md-filled-tonal-button class="button">x²</md-filled-tonal-button>
+            <md-filled-tonal-button class="button">0</md-filled-tonal-button>
+            <md-filled-tonal-button class="button">,</md-filled-tonal-button>
+            <md-filled-tonal-button class="button">=</md-filled-tonal-button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="./bundle.js"></script>
+  </body>
+</html>

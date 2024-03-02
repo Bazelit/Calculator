@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #d8e7cd;
+  font-family: "Open Sans", sans-serif;
+  user-select: none;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  transition: all 0.4s ease-in-out;
+}
+
+.wrapper.active {
+  color: white;
+  background: #1a1c17;
+  .calculator {
+    background: #2d3528;
+  }
+}
+
+.calculator {
+  background: #f3fde9;
+  padding: 35px 35px;
+  border-radius: 20px;
+}
+
+.calculator__input {
+  background: #b8c7dd;
+  border: none;
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  font-size: 18px;
+  padding-left: 15px;
+}
+
+md-filled-tonal-button {
+  margin: 0 0 5px 0;
+  font-size: 32px;
+  width: 70px;
+  height: 70px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 24px;
+  transition: all 0.3s ease-out;
+}
+
+md-filled-tonal-button:active {
+  border-radius: 20px;
+}
+
+.theme__switch {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.calc__button {
+  background-color: #f7b337;
+}
+
+::selection {
+  background-color: #ccf1bc;
+  color: white;
+}
+
+:root,
+:host {
+  --md-sys-color-background: #f6fbef;
+  --md-sys-color-on-background: #181d16;
+  --md-sys-color-surface: #f6fbef;
+  --md-sys-color-surface-dim: #d7dcd0;
+  --md-sys-color-surface-bright: #f6fbef;
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #f1f5e9;
+  --md-sys-color-surface-container: #ebf0e3;
+  --md-sys-color-surface-container-high: #e5eade;
+  --md-sys-color-surface-container-highest: #dfe4d8;
+  --md-sys-color-on-surface: #181d16;
+  --md-sys-color-surface-variant: #dbe6d3;
+  --md-sys-color-on-surface-variant: #40493c;
+  --md-sys-color-inverse-surface: #2d322a;
+  --md-sys-color-inverse-on-surface: #eef2e6;
+  --md-sys-color-outline: #707a6a;
+  --md-sys-color-outline-variant: #bfcab7;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  --md-sys-color-surface-tint: #186d0f;
+  --md-sys-color-primary: #186d0f;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #a0f789;
+  --md-sys-color-on-primary-container: #025400;
+  --md-sys-color-inverse-primary: #85db71;
+  --md-sys-color-secondary: #47663d;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #ccf1bc;
+  --md-sys-color-on-secondary-container: #33522b;
+  --md-sys-color-tertiary: #006b56;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #3ffdd1;
+  --md-sys-color-on-tertiary-container: #005241;
+  --md-sys-color-error: #ba1a1a;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #ffdad6;
+  --md-sys-color-on-error-container: #410002;
+}
+
+/* :root,
+:host {
+  --md-sys-color-background: #11140e;
+  --md-sys-color-on-background: #e1e4d9;
+  --md-sys-color-surface: #11140e;
+  --md-sys-color-surface-dim: #11140e;
+  --md-sys-color-surface-bright: #373a33;
+  --md-sys-color-surface-container-lowest: #0c0f09;
+  --md-sys-color-surface-container-low: #191d16;
+  --md-sys-color-surface-container: #1d211a;
+  --md-sys-color-surface-container-high: #272b24;
+  --md-sys-color-surface-container-highest: #32362f;
+  --md-sys-color-on-surface: #e1e4d9;
+  --md-sys-color-surface-variant: #42493c;
+  --md-sys-color-on-surface-variant: #c1c9b8;
+  --md-sys-color-inverse-surface: #e1e4d9;
+  --md-sys-color-inverse-on-surface: #2e322a;
+  --md-sys-color-outline: #8b9383;
+  --md-sys-color-outline-variant: #42493c;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  --md-sys-color-surface-tint: #98d779;
+  --md-sys-color-primary: #a9e989;
+  --md-sys-color-on-primary: #0f3900;
+  --md-sys-color-primary-container: #81be63;
+  --md-sys-color-on-primary-container: #092a00;
+  --md-sys-color-inverse-primary: #336b1a;
+  --md-sys-color-secondary: #b3cfa2;
+  --md-sys-color-on-secondary: #203616;
+  --md-sys-color-secondary-container: #2c4321;
+  --md-sys-color-on-secondary-container: #bdd9ab;
+  --md-sys-color-tertiary: #5ceed3;
+  --md-sys-color-on-tertiary: #00382f;
+  --md-sys-color-tertiary-container: #19c3aa;
+  --md-sys-color-on-tertiary-container: #002922;
+  --md-sys-color-error: #ffb4ab;
+  --md-sys-color-on-error: #690005;
+  --md-sys-color-error-container: #93000a;
+  --md-sys-color-on-error-container: #ffdad6;
+} */
