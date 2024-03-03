@@ -27,20 +27,64 @@ body {
   }
 }
 
+.button__backspace {
+  /* display: flex; */
+  flex-direction: column;
+}
+
+.wrapper.active,
+.wrapper.active :root,
+.wrapper.active :host {
+  --md-sys-color-background: #11140e;
+  --md-sys-color-on-error-container: #ffdad6;
+  --md-sys-color-background: #11140e;
+  --md-sys-color-on-background: #e1e4d9;
+  --md-sys-color-surface: #11140e;
+  --md-sys-color-surface-dim: #11140e;
+  --md-sys-color-surface-bright: #373a33;
+  --md-sys-color-surface-container-lowest: #0c0f09;
+  --md-sys-color-surface-container-low: #191d16;
+  --md-sys-color-surface-container: #1d211a;
+  --md-sys-color-surface-container-high: #272b24;
+  --md-sys-color-surface-container-highest: #32362f;
+  --md-sys-color-on-surface: #e1e4d9;
+  --md-sys-color-surface-variant: #42493c;
+  --md-sys-color-on-surface-variant: #c1c9b8;
+  --md-sys-color-inverse-surface: #e1e4d9;
+  --md-sys-color-inverse-on-surface: #2e322a;
+  --md-sys-color-outline: #8b9383;
+  --md-sys-color-outline-variant: #42493c;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+  --md-sys-color-surface-tint: #98d779;
+  --md-sys-color-primary: #a9e989;
+  --md-sys-color-on-primary: #0f3900;
+  --md-sys-color-primary-container: #81be63;
+  --md-sys-color-on-primary-container: #092a00;
+  --md-sys-color-inverse-primary: #336b1a;
+  --md-sys-color-secondary: #b3cfa2;
+  --md-sys-color-on-secondary: #203616;
+  --md-sys-color-secondary-container: #3c4a38;
+  --md-sys-color-on-secondary-container: #bdd9ab;
+  --md-sys-color-tertiary: #5ceed3;
+  --md-sys-color-on-tertiary: #00382f;
+  --md-sys-color-tertiary-container: #19c3aa;
+  --md-sys-color-on-tertiary-container: #002922;
+  --md-sys-color-error: #ffb4ab;
+  --md-sys-color-on-error: #690005;
+  --md-sys-color-error-container: #93000a;
+  --md-sys-color-on-error-container: #ffdad6;
+}
+
 .calculator {
   background: #f3fde9;
   padding: 35px 35px;
   border-radius: 20px;
 }
 
-.calculator__input {
-  background: #b8c7dd;
-  border: none;
+.display {
   width: 100%;
-  height: 50px;
-  border-radius: 30px;
-  font-size: 18px;
-  padding-left: 15px;
+  margin-bottom: 15px;
 }
 
 md-filled-tonal-button {
@@ -66,8 +110,17 @@ md-filled-tonal-button:active {
   right: 15px;
 }
 
-.calc__button {
-  background-color: #f7b337;
+.buttons__row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.buttons__row md-filled-tonal-button {
+  margin-right: 5px;
+}
+
+.buttons__row md-filled-tonal-button:last-child {
+  margin-right: 0;
 }
 
 ::selection {
@@ -115,44 +168,3 @@ md-filled-tonal-button:active {
   --md-sys-color-error-container: #ffdad6;
   --md-sys-color-on-error-container: #410002;
 }
-
-/* :root,
-:host {
-  --md-sys-color-background: #11140e;
-  --md-sys-color-on-background: #e1e4d9;
-  --md-sys-color-surface: #11140e;
-  --md-sys-color-surface-dim: #11140e;
-  --md-sys-color-surface-bright: #373a33;
-  --md-sys-color-surface-container-lowest: #0c0f09;
-  --md-sys-color-surface-container-low: #191d16;
-  --md-sys-color-surface-container: #1d211a;
-  --md-sys-color-surface-container-high: #272b24;
-  --md-sys-color-surface-container-highest: #32362f;
-  --md-sys-color-on-surface: #e1e4d9;
-  --md-sys-color-surface-variant: #42493c;
-  --md-sys-color-on-surface-variant: #c1c9b8;
-  --md-sys-color-inverse-surface: #e1e4d9;
-  --md-sys-color-inverse-on-surface: #2e322a;
-  --md-sys-color-outline: #8b9383;
-  --md-sys-color-outline-variant: #42493c;
-  --md-sys-color-shadow: #000000;
-  --md-sys-color-scrim: #000000;
-  --md-sys-color-surface-tint: #98d779;
-  --md-sys-color-primary: #a9e989;
-  --md-sys-color-on-primary: #0f3900;
-  --md-sys-color-primary-container: #81be63;
-  --md-sys-color-on-primary-container: #092a00;
-  --md-sys-color-inverse-primary: #336b1a;
-  --md-sys-color-secondary: #b3cfa2;
-  --md-sys-color-on-secondary: #203616;
-  --md-sys-color-secondary-container: #2c4321;
-  --md-sys-color-on-secondary-container: #bdd9ab;
-  --md-sys-color-tertiary: #5ceed3;
-  --md-sys-color-on-tertiary: #00382f;
-  --md-sys-color-tertiary-container: #19c3aa;
-  --md-sys-color-on-tertiary-container: #002922;
-  --md-sys-color-error: #ffb4ab;
-  --md-sys-color-on-error: #690005;
-  --md-sys-color-error-container: #93000a;
-  --md-sys-color-on-error-container: #ffdad6;
-} */
