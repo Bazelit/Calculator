@@ -27,11 +27,6 @@ body {
   }
 }
 
-.button__backspace {
-  /* display: flex; */
-  flex-direction: column;
-}
-
 .wrapper.active,
 .wrapper.active :root,
 .wrapper.active :host {
