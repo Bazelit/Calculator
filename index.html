@@ -19,74 +19,70 @@
         </md-outlined-text-field>
         <div class="calculator__buttons">
           <div class="buttons__row">
-            <md-filled-tonal-button onclick="clearDisplay()"
-              >C</md-filled-tonal-button
-            >
+            <md-filled-button onclick="clearDisplay()">C</md-filled-button>
             <md-filled-tonal-button onclick="appendToDisplay('%')"
               >%</md-filled-tonal-button
             >
             <md-filled-tonal-button onclick="appendToDisplay('/')"
               >/</md-filled-tonal-button
             >
-            <md-filled-tonal-button class="button__backspace"  onclick="backspace()"
+            <md-filled-tonal-button
+              class="button__backspace"
+              onclick="backspace()"
               >⌫</md-filled-tonal-button
             >
           </div>
           <div class="buttons__row">
-            <md-filled-tonal-button onclick="appendToDisplay('7')"
-              >7</md-filled-tonal-button
+            <md-elevated-button onclick="appendToDisplay('7')"
+              >7</md-elevated-button
             >
-            <md-filled-tonal-button onclick="appendToDisplay('8')"
-              >8</md-filled-tonal-button
+            <md-elevated-button onclick="appendToDisplay('8')"
+              >8</md-elevated-button
             >
-            <md-filled-tonal-button onclick="appendToDisplay('9')"
-              >9</md-filled-tonal-button
+            <md-elevated-button onclick="appendToDisplay('9')"
+              >9</md-elevated-button
             >
             <md-filled-tonal-button onclick="appendToDisplay('*')"
               >*</md-filled-tonal-button
             >
           </div>
           <div class="buttons__row">
-            <md-filled-tonal-button onclick="appendToDisplay('4')"
-              >4</md-filled-tonal-button
+            <md-elevated-button onclick="appendToDisplay('4')"
+              >4</md-elevated-button
             >
-            <md-filled-tonal-button onclick="appendToDisplay('5')"
-              >5</md-filled-tonal-button
+            <md-elevated-button onclick="appendToDisplay('5')"
+              >5</md-elevated-button
             >
-            <md-filled-tonal-button onclick="appendToDisplay('6')"
-              >6</md-filled-tonal-button
+            <md-elevated-button onclick="appendToDisplay('6')"
+              >6</md-elevated-button
             >
             <md-filled-tonal-button onclick="appendToDisplay('-')"
               >-</md-filled-tonal-button
             >
           </div>
           <div class="buttons__row">
-            <md-filled-tonal-button onclick="appendToDisplay('1')"
-              >1</md-filled-tonal-button
+            <md-elevated-button onclick="appendToDisplay('1')"
+              >1</md-elevated-button
             >
-            <md-filled-tonal-button onclick="appendToDisplay('2')"
-              >2</md-filled-tonal-button
+            <md-elevated-button onclick="appendToDisplay('2')"
+              >2</md-elevated-button
             >
-            <md-filled-tonal-button onclick="appendToDisplay('3')"
-              >3</md-filled-tonal-button
+            <md-elevated-button onclick="appendToDisplay('3')"
+              >3</md-elevated-button
             >
             <md-filled-tonal-button onclick="appendToDisplay('+')"
               >+</md-filled-tonal-button
             >
           </div>
           <div class="buttons__row">
-            <md-filled-tonal-button onclick="power()"
-              >x²</md-filled-tonal-button
+            <md-elevated-button onclick="power()">x²</md-elevated-button>
+            <md-elevated-button onclick="appendToDisplay('0')"
+              >0</md-elevated-button
             >
-            <md-filled-tonal-button onclick="appendToDisplay('0')"
-              >0</md-filled-tonal-button
+            <md-elevated-button onclick="appendToDisplay('.')"
+              >.</md-elevated-button
             >
-            <md-filled-tonal-button onclick="appendToDisplay('.')"
-              >.</md-filled-tonal-button
-            >
-            <md-filled-tonal-button onclick="calculate()"
-              >=</md-filled-tonal-button
-            >
+            <md-filled-button onclick="calculate()">=</md-filled-button>
           </div>
         </div>
       </div>
